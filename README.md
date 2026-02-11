@@ -36,17 +36,17 @@ Colócalos en el directorio raíz o en la carpeta `/data`.
 
 ## Métodos implementados
 
-✔ Preprocesamiento de señales RSSI  
-✔ Reemplazo de valores sin señal  
-✔ Eliminación de APs no informativos  
-✔ Ingeniería de características estadísticas  
-✔ Estandarización de datos  
-✔ PCA (95% varianza)  
-✔ K-Means (barrido de k)  
-✔ DBSCAN (barrido de ε y MinPts)  
-✔ Métricas internas y externas  
-✔ Matrices de confusión  
-✔ Visualización t-SNE  
+- Preprocesamiento de señales RSSI  
+- Reemplazo de valores sin señal  
+- Eliminación de APs no informativos  
+- Ingeniería de características estadísticas  
+- Estandarización de datos  
+- PCA (95% varianza)  
+- K-Means (barrido de k)  
+- DBSCAN (barrido de ε y MinPts)  
+- Métricas internas y externas  
+- Matrices de confusión  
+- Visualización t-SNE  
 
 ---
 
