@@ -1,8 +1,8 @@
-# 📡 Proyecto 3 — Clustering No Supervisado con WiFi Fingerprinting
+#  Proyecto 3 — Clustering No Supervisado con WiFi Fingerprinting
 
 
 
-## 📌 Descripción
+##  Descripción
 
 Este proyecto presenta un análisis experimental de métodos de **aprendizaje no supervisado** aplicados a datos de localización indoor mediante **WiFi fingerprinting (RSSI)**.
 
@@ -17,11 +17,11 @@ El objetivo principal es analizar si los algoritmos de clustering pueden recuper
 
 ---
 
-## 🌐 Dataset
+##  Dataset
 
 Los datos se obtuvieron del **UCI Machine Learning Repository**:
 
-🔗 https://archive.ics.uci.edu/dataset/310/ujiindoorloc
+https://archive.ics.uci.edu/dataset/310/ujiindoorloc
 
 ### Archivos utilizados
 
@@ -34,7 +34,7 @@ Colócalos en el directorio raíz o en la carpeta `/data`.
 
 ---
 
-## 🧠 Métodos implementados
+## Métodos implementados
 
 ✔ Preprocesamiento de señales RSSI  
 ✔ Reemplazo de valores sin señal  
@@ -50,7 +50,7 @@ Colócalos en el directorio raíz o en la carpeta `/data`.
 
 ---
 
-## 📊 Métricas de evaluación
+##  Métricas de evaluación
 
 **Internas:**
 
@@ -70,9 +70,9 @@ Colócalos en el directorio raíz o en la carpeta `/data`.
 
 ---
 
-## ▶️ Ejecución
+##  Ejecución
 
-### 1️⃣ Instalar dependencias
+###  Instalar dependencias
 
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn
