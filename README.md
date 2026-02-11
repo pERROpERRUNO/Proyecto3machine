@@ -1,8 +1,6 @@
 # 📡 Proyecto 3 — Clustering No Supervisado con WiFi Fingerprinting
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Status](https://img.shields.io/badge/Status-Completed-success)
-![License](https://img.shields.io/badge/License-Academic-lightgrey)
+
 
 ## 📌 Descripción
 
