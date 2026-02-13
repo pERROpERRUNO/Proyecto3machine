@@ -1,38 +1,111 @@
 #  Proyecto 3 — Clustering No Supervisado con WiFi Fingerprinting
 
+## Autores
 
+- **Meza Leon, Ricardo Manuel**
+- **Ramos Bonilla, Miguel Angel**
+- **Cabezas Ramirez, Dylan Andres**
+- **Trujillo Flores, Frans Josep**
+
+**Institución**: Universidad de Ingenieria y Tecnología 
+**Curso**: Machine Learning 
+**Fecha**: Febrero 2024
+
+---
 
 ##  Descripción
 
-Este proyecto presenta un análisis experimental de métodos de **aprendizaje no supervisado** aplicados a datos de localización indoor mediante **WiFi fingerprinting (RSSI)**.
+Este proyecto implementa un **análisis exhaustivo de técnicas de clustering no supervisado** aplicadas al problema de **posicionamiento indoor mediante WiFi fingerprinting**. Utilizando señales RSSI (Received Signal Strength Indicator) de 520 puntos de acceso WiFi, se exploran dos algoritmos principales:
 
-Se emplea el dataset **UJIIndoorLoc**, explorando la estructura de datos de alta dimensionalidad mediante:
+- **K-Means**: Para identificar estructura macro (edificios)
+- **DBSCAN**: Para capturar granularidad fina (espacios específicos)
 
-- Reducción de dimensionalidad (PCA)
-- Clustering (K-Means, DBSCAN)
-- Evaluación con métricas internas y externas
-- Visualización con t-SNE
+###  Objetivos Principales
 
-El objetivo principal es analizar si los algoritmos de clustering pueden recuperar información espacial relevante (pisos/edificios) sin utilizar directamente las etiquetas.
+1. **Análisis exploratorio** de 19,937 mediciones WiFi en entorno multipisos
+2. **Reducción de dimensionalidad** mediante PCA y visualización con t-SNE
+3. **Clustering jerárquico** multi-escala (edificios → pisos → áreas)
+4. **Evaluación comparativa** con métricas internas y externas
+5. **Optimización de hiperparámetros** para K-Means y DBSCAN
+
+## Dataset
+
+### Fuente de Datos
+
+**UJIIndoorLoc Database** - UCI Machine Learning Repository  
+🔗 [https://archive.ics.uci.edu/dataset/310/ujiindoorloc](https://archive.ics.uci.edu/dataset/310/ujiindoorloc)
+
+### Características del Dataset
+
+- **Muestras**: 19,937 (entrenamiento) + 1,111 (validación)
+- **Características**: 520 WAPs (WiFi Access Points)
+- **Rango RSSI**: [-104, 0] dBm (100 = señal no detectada)
+- **Estructura espacial**:
+  - 3 edificios
+  - 5 pisos por edificio
+  - 735 áreas únicas (combinación Building-Floor-Space)
+- **Metadatos**: Coordenadas GPS, timestamps, IDs de usuario y dispositivo
+
+### 📥 Descarga e Instalación
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/wifi-clustering.git
+cd wifi-clustering
+
+# Descargar dataset
+wget https://archive.ics.uci.edu/static/public/310/ujiindoorloc.zip
+unzip ujiindoorloc.zip
+
+# Estructura esperada
+proyecto/
+├── trainingData.csv
+├── validationData.csv
+├── clustering_wifi_final.py
+└── README.md
+```
 
 ---
 
-##  Dataset
+##  Instalación
 
-Los datos se obtuvieron del **UCI Machine Learning Repository**:
+### Requisitos del Sistema
 
-https://archive.ics.uci.edu/dataset/310/ujiindoorloc
+- Python 3.8 o superior
+- 4 GB RAM mínimo (8 GB recomendado)
+- 500 MB de espacio en disco
 
-### Archivos utilizados
+### Dependencias
 
-Después de descargar y extraer el dataset:
+```bash
+# Instalar todas las dependencias
+pip install -r requirements.txt
+```
 
-- `trainingData.csv`
-- `validationData.csv`
+**requirements.txt:**
+```txt
+numpy>=1.21.0
+pandas>=1.3.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+scikit-learn>=1.0.0
+scipy>=1.7.0
+```
 
-Colócalos en el directorio raíz o en la carpeta `/data`.
+O instalar manualmente:
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn scipy
+```
 
 ---
+
+## Uso Rápido
+
+### Ejecución Completa
+
+```bash
+python clustering_wifi_final.py
+```
 
 ## Métodos implementados
 
@@ -70,9 +143,3 @@ Colócalos en el directorio raíz o en la carpeta `/data`.
 
 ---
 
-##  Ejecución
-
-###  Instalar dependencias
-
-```bash
-pip install numpy pandas matplotlib seaborn scikit-learn
